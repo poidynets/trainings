@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 
 namespace Trainings
@@ -95,6 +95,11 @@ namespace Trainings
                         }
                         break;
                     }
+                    case "":
+                    {
+                            Console.WriteLine("We need some command from your side. Dont leave empty field");
+                        break;
+                    }
                     default:
                     {
                         Console.WriteLine("we dont have this function \n");
@@ -133,12 +138,12 @@ namespace Trainings
             {
                 case 1:
                 {
-                    tmp_str = "Name" + Name + "cheers";
+                    tmp_str = "Name " + Name + " cheers";
                     break;
                 }
                 case 2:
                 {
-                    tmp_str = "Im" + Age + "Not to old?";
+                    tmp_str = "Im " + Age + " Not to old?";
                     break;
                 }
                 case 3:
@@ -159,7 +164,7 @@ namespace Trainings
             {
                 if (Health > 40)
                 {
-                    string outString = Name + "walknig in the park and planning evening";
+                    string outString = Name + " walknig in the park and planning evening";
                     Console.WriteLine(outString);
                 }
                 else
@@ -170,7 +175,7 @@ namespace Trainings
             }
             else
             {
-                string outString = Name + "im sorry, he is dead :(";
+                string outString = Name + " im sorry, he is dead :(";
                 Console.WriteLine(outString);
             }
         }
@@ -188,3 +193,4 @@ namespace Trainings
         }
     }
 }
+
