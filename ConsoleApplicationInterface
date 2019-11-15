@@ -13,24 +13,33 @@ namespace ConsoleApplicationInterface
         }
     
 }
-public interface IMobile
+public interface ISmartfone
     {
-      void MethodA();
+        void OS();
+        void AppStore();
     }
-public interface IPhone
+    public class Samsung : ISmartfone
     {
-        void MethodB();
-    }
-    public class ClassA : IPhone, IMobile
-    {
-        public void MethodA()
+        public void AppStore()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Samsung AppStore");
         }
 
-        public void MethodB()
+        public void OS()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Samsung OS");
+        }
+    }
+    public class IPhone : ISmartfone
+    {
+        public void AppStore()
+        {
+            Console.WriteLine("IPhone AppStore");
+        }
+
+        public void OS()
+        {
+            Console.WriteLine("IPhone OS");
         }
     }
 }
