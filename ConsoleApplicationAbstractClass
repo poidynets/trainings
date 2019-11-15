@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplicationAbstractClass
 {
+    // 1. We cannot create an object of Abstract Class
+    // 2. An Abstract Class can never be sealed or static
+    // 3. An Abstract Class can have abstract as well non abstract method
+    // 4. We can create constructor of Abstract Class
+    // 5. A concrete class cannot inherit more than one abstract class
+
     class Program
     {
         static void Main(string[] args)
@@ -16,17 +22,23 @@ namespace ConsoleApplicationAbstractClass
             //obj.phonecolor();
             //obj.phonemodel();
 
-            Iphone obj2 = new IphoneXS();
-            obj2.Call();
-            obj2.SMS();
-            obj2.PhoneColor();
-            obj2.PhoneModel();
+            //Iphone obj2 = new IphoneXS();
+            //obj2.Call();
+            //obj2.SMS();
+            //obj2.PhoneColor();
+            //obj2.PhoneModel();
+
+            Iphone obj; 
 
             Console.ReadKey();
         }
     }
     public abstract class Iphone
     {
+        public Iphone()
+        {
+
+        }
         public void Call()
         {
             Console.WriteLine("Phone Call");
