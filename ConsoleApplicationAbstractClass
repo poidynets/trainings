@@ -10,11 +10,17 @@ namespace ConsoleApplicationAbstractClass
     {
         static void Main(string[] args)
         {
-            Iphone obj = new IPhoneX();
-            obj.Call();
-            obj.SMS();
-            obj.PhoneColor();
-            obj.PhoneModel();
+            //iphone obj = new iphonex();
+            //obj.call();
+            //obj.sms();
+            //obj.phonecolor();
+            //obj.phonemodel();
+
+            Iphone obj2 = new IphoneXS();
+            obj2.Call();
+            obj2.SMS();
+            obj2.PhoneColor();
+            obj2.PhoneModel();
 
             Console.ReadKey();
         }
@@ -42,6 +48,18 @@ namespace ConsoleApplicationAbstractClass
         public override void PhoneModel()
         {
             Console.WriteLine("IPhone X");
+        }
+    }
+    public class IphoneXS : Iphone
+    {
+        public override void PhoneColor()
+        {
+            Console.WriteLine("Gold");
+        }
+
+        public override void PhoneModel()
+        {
+            Console.WriteLine("IPhone XS");
         }
     }
 }
