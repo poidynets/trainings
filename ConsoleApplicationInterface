@@ -13,16 +13,21 @@ namespace ConsoleApplicationInterface
         }
     
 }
+public interface ITouchScreen
+    {
+        void GetTouchScreen();
+    }
 public interface ISmartfone
     {
         void OS();
         void AppStore();
     }
+
     public class Samsung : ISmartfone
     {
         public void AppStore()
         {
-            Console.WriteLine("Samsung AppStore");
+            Console.WriteLine("Samsung App Store");
         }
 
         public void OS()
@@ -30,11 +35,16 @@ public interface ISmartfone
             Console.WriteLine("Samsung OS");
         }
     }
-    public class IPhone : ISmartfone
+    public class IPhone : ISmartfone, ITouchScreen
     {
         public void AppStore()
         {
-            Console.WriteLine("IPhone AppStore");
+            Console.WriteLine("IPhone App Store");
+        }
+
+        public void GetTouchScreen()
+        {
+            Console.WriteLine("IPhone Touch Screen");
         }
 
         public void OS()
