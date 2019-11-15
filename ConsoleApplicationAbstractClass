@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplicationAbstractClass
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Iphone obj = new IPhoneX();
+            obj.Call();
+            obj.SMS();
+            obj.PhoneColor();
+            obj.PhoneModel();
+
+            Console.ReadKey();
+        }
+    }
+    public abstract class Iphone
+    {
+        public void Call()
+        {
+            Console.WriteLine("Phone Call");
+        }
+        public void SMS()
+        {
+            Console.WriteLine("Phone SMS");
+        }
+        public abstract void PhoneModel();
+        public abstract void PhoneColor();
+    }
+    public class IPhoneX : Iphone
+    {
+        public override void PhoneColor()
+        {
+            Console.WriteLine("Black");
+        }
+
+        public override void PhoneModel()
+        {
+            Console.WriteLine("IPhone X");
+        }
+    }
+}
